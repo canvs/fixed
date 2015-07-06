@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>旅行</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, maximum-scale=1, user-scalable=no">
+		<meta name="MobileOptimized" content="320">
+		<link rel="stylesheet" type="text/css" href="/static/aio_ea92fe8.css" />
+<style>
+/*平滑滚动兼容版*/
+
+
+
+/*内容固定*/
+	body {color: #000;}
+	html,body{height:100%;}
+	.wrap{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;height:100%;}
+	.header,.footer{height:40px;line-height:40px;background-color:#D8D8D8;text-align:center;}
+	.main{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;width:100%;}
+	/*end*/
+	p {
+		margin: 50px;
+	}
+
+	/*方案一*/
+	.css{
+		overflow:auto;/* winphone8和android4+ */
+		-webkit-overflow-scrolling: touch; /* ios5+ */
+	}
+	/*end*/
+/*方案二*/
+
+
+/*winphone8 手机使用如下 hack*/
+ /*iscroll4.js和overflow:auto*/
+/* 在 ios 系统上的表现十分良好，滚动顺畅
+在部分 android 系统上性能较差，特别是滚动区域内容多时，滚动页面会出现卡顿
+ios 和 android 系统下有不少 bug，如表单获焦弹出软键盘后页面高度没有重新计算、出现闪屏等(这里不做讨论)
+winphone 不支持*/
+
+/*那么这里的处理方案是，页面初始化时判断是 weibit 浏览器则启用 iscroll4.js*/
+
+<div class="wap ie-ova" id="">
+/*<!-- webkit 用户设置 ID 为 iscroll，可启用iscroll -->*/
+    ...
+</div>
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+   .ie-ova{overflow:auto;} /* winphone8 */
+}
+
+	</style>
+
+</head>
+	<body>
+<div class="wrap">
+      <div class="header">header</div>
+      <div class="main css">
+       <p>弹性滚动区域</p>
+       <p>弹性滚动区域</p>
+       <p>弹性滚动区域</p>
+       <p>弹性滚动区域</p>
+       <p>弹性滚动区域</p>
+       <p>弹性滚动区域</p>
+       <p>弹性滚动区域</p>
+       <p>弹性滚动区域</p>
+       <p>弹性滚动区域</p>
+				<input type="text">
+       <p>弹性滚动区域</p>
+       <p>弹性滚动区域</p>
+       <p>弹性滚动区域</p>
+       <p>弹性滚动区域</p>
+       <p>弹性滚动区域</p>
+      </div>
+      <div class="footer">footer</div>
+</div>
+	
+</body>
+	</html>	

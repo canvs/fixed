@@ -1,0 +1,47 @@
+$font:"Helvetica Neue",Helvetica,Arial,sans-serif;
+body {
+	font-family: $font;
+}
+nav {
+	ul {
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+	}
+
+	li {display: inline-block;}
+	a {
+		display: block;
+		padding: 6px 12px;
+		text-decoration: none;
+	}
+}
+// mixin 定义代码片段，传递参数
+@mixin box-sizing ($sizing) {
+	-webkit-box-sizing:$sizing;
+	-moz-box-sizing:$sizing;
+	-ms-box-sizing:$sizing;
+	-o-box-sizing:$sizing;
+	box-sizing:$sizing;
+}
+.box-border {
+	border: 1px solid #ccc;
+	@include box-sizing(border-box);
+}
+
+// 扩展继承extend 
+.a {
+	border: 1px solid #ccc;
+	padding: 10px;
+	color: #333;
+}
+.b {
+	@extend .a;
+	border-color: yellow;
+}
+// 运算
+.container {width: 100%;}
+article[role='main'] {
+	float: left;
+	width: 600px/960px*100%;
+}
